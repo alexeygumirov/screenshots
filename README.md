@@ -2,13 +2,15 @@
 
 This is the project containing screenshots of my scripts and some examples of them.
 
-For all functions with the `fzf` preview I have standard key bindings:
+For all functions with the `fzf` preview I have following key bindings:
 - **F1**: preview page down
 - **F2**: preview scroll down
 - **F3**: preview scroll up
 - **F4**: preview page up
 - **Ctrl + A**: select all
 - **Ctrl + Space**: deselect all
+
+For all other standard key bindings of `fzf` please use `man fzf`.
 
 ## Generic bash functions
 
