@@ -4,9 +4,9 @@ This is the project containing screenshots of my scripts and some examples of th
 
 ## Generic bash functions
 
-### `cd` command enhancement with `fzf`
+### `cd` command enhancement with [`fzf`][fzf-link]
 
-This functions relies on `fzf`, `fd` and `bat`.
+This functions relies on [`fzf`][fzf-link], [`fd`][fd-link] and [`bat`][bat-link].
 
 ```sh
 function cd-fuzzy(){
@@ -23,7 +23,7 @@ function cd-fuzzy(){
 
 ### Preview of files in terminal (non-binary)
 
-This functions relies on `fzf`, `fd` and `bat`.
+This functions relies on [`fzf`][fzf-link], [`fd`][fd-link] and [`bat`][bat-link].
 
 ```sh
 function preview(){
@@ -45,4 +45,7 @@ function preview(){
 
 ![preview() screenshot](img/preview_with_fzf.png "preview function screenshot")
 
-
+<!-- Links -->
+[fzf-link]: https://github.com/junegunn/fzf
+[fd-link]: https://github.com/sharkdp/fd 
+[bat-link]: https://github.com/sharkdp/bat
