@@ -2,6 +2,14 @@
 
 This is the project containing screenshots of my scripts and some examples of them.
 
+For all functions with the `fzf` preview I have standard key bindings:
+- **F1**: preview page down
+- **F2**: preview scroll down
+- **F3**: preview scroll up
+- **F4**: preview page up
+- **Ctrl + A**: select all
+- **Ctrl + Space**: deselect all
+
 ## Generic bash functions
 
 ### `cd` command enhancement with [`fzf`][fzf-link]
@@ -62,6 +70,20 @@ function gitadd-fuzzy(){
 ```
 
 ![gitadd-fuzzy screenshot](img/git-add_with_fzf.png)
+
+### Git-diff with `fzf`
+
+`git-diff` function improved with [`fzf`][fzf-link].
+
+function gitdiff-fuzzy(){
+    local FZF_header="\`git-diff\`. Select files."
+    git status -s | grep "^ M" | cut -d" " -f3 | \
+        fzf +m --header="$FZF_header" --reverse --border \
+        --bind=change:up,f1:preview-page-down,f2:preview-down,f3:preview-up,f4:preview-page-up \
+        --preview 'git diff --color=always {} | bat -l"Git Commit" --color=always' --preview-window=right:75%:wrap
+}
+
+![gitdiff-fuzzy screenshot](./img/git-diff_with_fzf.png)
 
 <!-- Links -->
 [fzf-link]: https://github.com/junegunn/fzf
