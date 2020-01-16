@@ -77,6 +77,7 @@ function gitadd-fuzzy(){
 
 `git-diff` function improved with [`fzf`][fzf-link].
 
+```sh
 function gitdiff-fuzzy(){
     local FZF_header="\`git-diff\`. Select files."
     git status -s | grep "^ M" | cut -d" " -f3 | \
@@ -84,6 +85,7 @@ function gitdiff-fuzzy(){
         --bind=change:up,f1:preview-page-down,f2:preview-down,f3:preview-up,f4:preview-page-up \
         --preview 'git diff --color=always {} | bat -l"Git Commit" --color=always' --preview-window=right:75%:wrap
 }
+```
 
 ![gitdiff-fuzzy screenshot](./img/git-diff_with_fzf.png)
 
