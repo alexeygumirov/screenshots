@@ -101,6 +101,8 @@ function gitrestore-staged-fuzzy(){
 }
 ```
 
+![gitrestore-fuzzy --staged screenshot](img/git-restore-staged_with_fzf.png)
+
 ### `git-restore` with `fzf` for unstaged
 
 `git-restore` function improved with [`fzf`][fzf-link] for the unstaged files. It lists unstaged files which you want to restore in a nice way and provides preview using `git-diff`.
@@ -114,6 +116,8 @@ function gitrestore-unstaged-fuzzy(){
         --preview 'git diff --color=always {} | bat -l"Diff" --color=always' --preview-window=right:75%)
 }
 ```
+
+![gitrestore-fuzzy screenshot](img/git-restore-unstaged_with_fzf.png)
 
 ### `git-rm` with `fzf`
 
