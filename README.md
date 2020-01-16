@@ -1,4 +1,4 @@
-# Screenshots
+# Bash functions and scripts with screenshots
 
 This is the project containing screenshots of my scripts and some examples of them.
 
