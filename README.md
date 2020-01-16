@@ -128,6 +128,8 @@ function gitrm-fuzzy(){
 }
 ```
 
+![gitrm-fuzzy screensho](img/git-rm_with_fzf.png)
+
 ### `git-log` with `fzf`
 
 `git-log` function improved with [`fzf`][fzf-link]. It lists commits and provides preview using `git-show` and [`bat`][bat-link].
