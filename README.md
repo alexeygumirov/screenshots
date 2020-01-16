@@ -45,6 +45,24 @@ function preview(){
 
 ![preview() screenshot](img/preview_with_fzf.png "preview function screenshot")
 
+## Git functions
+
+### Git-add with `fzf`
+
+`git-add` function improved with [`fzf`][fzf-link]. It provides preview of the file modifications using `git-diff`.
+
+```sh
+function gitadd-fuzzy(){
+    local FZF_header="\`git-add\`. Select files."
+    git add $(git ls-files --modified --others --exclude-standard | \
+        fzf -m --header="$FZF_header" --reverse --border \
+        --bind=change:up,ctrl-a:select-all,ctrl-space:deselect-all,f1:preview-page-down,f2:preview-down,f3:preview-up,f4:preview-page-up \
+        --preview 'git diff --color=always {} | bat -l"Git Commit" --color=always' --preview-window=right:75%)
+}
+```
+
+![gitadd-fuzzy screenshot](img/git-add_with_fzf.png)
+
 <!-- Links -->
 [fzf-link]: https://github.com/junegunn/fzf
 [fd-link]: https://github.com/sharkdp/fd 
