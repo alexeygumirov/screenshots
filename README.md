@@ -147,6 +147,8 @@ function gitlog-fuzzy(){
 }
 ```
 
+![gitlog-fuzzy screenshot](img/git-log_with_fzf.png)
+
 ### `git-merge` with `fzf`
 
 `git-merge` function improved with [`fzf`][fzf-link]. It lists branches and provides preview using `git-log`.
@@ -163,6 +165,8 @@ function gitmerge-fuzzy(){
     fi
 }
 ```
+
+![gitmerge-fuzzy](img/git-merge_with_fzf.png)
 
 ### `git-checkout <branch>` with `fzf`
 
