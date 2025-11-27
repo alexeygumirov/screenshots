@@ -1,3 +1,13 @@
+# 👋 THIS REPOSITORY HAS MOVED! 👋
+
+**This repository is no longer actively maintained on GitHub.**
+
+Please update your bookmarks and remotes to the new home on Codeberg:
+
+➡️ **[https://codeberg.org/alexeygumirov/bash-scripts-with-fzf](https://codeberg.org/alexeygumirov/bash-scripts-with-fzf)** ⬅️
+
+Thank you for your understanding!
+
 # Bash functions and scripts with screenshots
 
 This is the project containing screenshots of my scripts and some examples of them.
